@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinishScript : MonoBehaviour
 {
     [SerializeField] bool PlayerN;
     [SerializeField] bool PlayerR;
     public LayerMask playerMask;
-    string PlayerNorm;
+    int scene2Load;
 
     void Start()
     {
-
+        scene2Load = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
     void Update()
@@ -20,7 +21,7 @@ public class FinishScript : MonoBehaviour
         MyCollisions();
         if (PlayerN && PlayerR)
         {
-
+            SceneManager.LoadScene(scene2Load);
         }
 
     }
