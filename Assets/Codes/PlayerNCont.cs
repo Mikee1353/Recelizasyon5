@@ -10,18 +10,20 @@ public class PlayerNCont : MonoBehaviour
     [SerializeField] private LayerMask GroundMask;
     Rigidbody2D rb;
     public bool isFacingLeft = true;
-    SpriteRenderer sr;
+    Animator anim;
 
     public float fallMultiplier = 2.5f;
     void Start()
     {
         groundCheck = GetComponentInChildren<CircleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
+        var horiz = rb.velocity.y;
+
         //Movement
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
@@ -39,7 +41,6 @@ public class PlayerNCont : MonoBehaviour
             transform.Rotate(new Vector3(0, 180, 0));
         }
 
-
         //BetterJump
         if (rb.velocity.y < 0)
         {
@@ -50,6 +51,25 @@ public class PlayerNCont : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
 
+        //WalkAnimation
+        anim.SetFloat("Speed", Mathf.Abs(movement));
+        
+        //JumpAnimation
+        if (horiz > 0)
+        {
+            anim.SetBool("Jumping", true);
+            anim.SetBool("Falling", false);
+        }
+        else if (horiz < 0)
+        {
+            anim.SetBool("Jumping", false);
+            anim.SetBool("Falling", true);
+        }
+        else
+        {
+            anim.SetBool("Falling", false);
+            anim.SetBool("Jumping", false);
+        }
 
 
     }
