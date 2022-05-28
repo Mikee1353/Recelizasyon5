@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/Efe.unity
+    guid: 0e73865cfe55e1a45a5bacdfba289bec
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: "Assets/Scenes/Murat Oyuncak Oynuyo/Murat'\u0131n Oyunca\u011F\u0131 1.unity"
+    guid: e94fcc7565ae56549b1b6b55df3e5f0d
+  - enabled: 1
+    path: Assets/Scenes/Murat Oyuncak Oynuyo/Simetri Ucubesi.unity
+    guid: 718cd89e7ad80e54eb52a01d57d14512
+  - enabled: 1
+    path: Assets/Scenes/Murat Oyuncak Oynuyo/Oyuncak 2.unity
+    guid: acb486dcd11fe244c91a4f6ba2434e4b
+  - enabled: 1
+    path: Assets/Scenes/Murat Oyuncak Oynuyo/Oyuncak 3.unity
+    guid: 422930d1e563dda4381948d4bdf3060a
+  - enabled: 1
+    path: Assets/Scenes/Murat Oyuncak Oynuyo/Oyuncak 4.unity
+    guid: 9d19b10e03cc24747a4b8932c2ada6ce
+  m_configObjects: {}
