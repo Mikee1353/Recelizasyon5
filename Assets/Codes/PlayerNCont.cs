@@ -9,12 +9,15 @@ public class PlayerNCont : MonoBehaviour
     [SerializeField] CircleCollider2D groundCheck;
     [SerializeField] private LayerMask GroundMask;
     Rigidbody2D rb;
+    public bool isFacingLeft = true;
+    SpriteRenderer sr;
 
     public float fallMultiplier = 2.5f;
     void Start()
     {
         groundCheck = GetComponentInChildren<CircleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -28,6 +31,14 @@ public class PlayerNCont : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
         }
+
+        //Flip
+        if ((movement > 0 && isFacingLeft) || (movement < 0 && !isFacingLeft))
+        {
+            isFacingLeft = !isFacingLeft;
+            transform.Rotate(new Vector3(0, 180, 0));
+        }
+
 
         //BetterJump
         if (rb.velocity.y < 0)

@@ -9,7 +9,9 @@ public class PlayerRCont : MonoBehaviour
     [SerializeField] CircleCollider2D groundCheck;
     [SerializeField] private LayerMask GroundMask;
     Rigidbody2D rb;
-    
+    public bool isFacingRight;
+
+
     public float fallMultiplier = 2.5f;
     void Start()
     {
@@ -27,6 +29,13 @@ public class PlayerRCont : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = Vector2.down * jumpForce;
+        }
+
+        //Flip
+        if ((movement < 0 && isFacingRight) || (movement > 0 && !isFacingRight))
+        {
+            isFacingRight = !isFacingRight;
+            transform.Rotate(new Vector3(0, 180, 0));
         }
 
         //BetterJump
