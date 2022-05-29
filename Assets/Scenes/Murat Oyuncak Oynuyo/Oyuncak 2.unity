@@ -2383,10 +2383,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2028177555}
   lines:
-  - Our bodies are different, our lives are the same...
-  - ... what about our souls? Am I dreaming? Just like every day... my feelings point
-    here.
-  - me here... ... what attracts? It's that weird... ...but nice visit.
+  - Our bodies are different, our lives are the same...... what about our souls?
+    Am I dreaming? Just like every day...
+  - Me here... ... what attracts? It's that weird... ...but nice visit. Meaningless.
+    Meaningless.
+  - Even our unhappiness... ... actually the same. Will everything be the same again?
+    Ordinary is no longer...
   textSpeed: 0.3
   audSrc: {fileID: 0}
   one: {fileID: 8300000, guid: c5ae6ed3911f02243975a2cd3cb6b9a0, type: 3}
