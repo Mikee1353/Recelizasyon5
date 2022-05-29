@@ -2341,6 +2341,7 @@ GameObject:
   - component: {fileID: 1021354630}
   - component: {fileID: 1021354629}
   - component: {fileID: 1021354628}
+  - component: {fileID: 1021354631}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -2382,12 +2383,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2028177555}
   lines:
-  - This life I'm in.. ...as if it's not mine. This place is so pointless. Our bodies
-    are different, our lives are the same...
-  - ... what about our souls? Am I dreaming? Just like every day... my feelings point
-    here.
-  - me here... ... what attracts? It's that weird... ...but nice visit.
+  - Our bodies are different, our lives are the same...... what about our souls?
+    Am I dreaming? Just like every day...
+  - Me here... ... what attracts? It's that weird... ...but nice visit. Meaningless.
+    Meaningless.
+  - Even our unhappiness... ... actually the same. Will everything be the same again?
+    Ordinary is no longer...
   textSpeed: 0.3
+  audSrc: {fileID: 0}
+  one: {fileID: 8300000, guid: c5ae6ed3911f02243975a2cd3cb6b9a0, type: 3}
+  two: {fileID: 8300000, guid: 7deff5d61624fe64cb407896b4a10a70, type: 3}
+  three: {fileID: 8300000, guid: 69b95adf83217a345bf1a5ad7c627b40, type: 3}
+  musicCounter: 1
 --- !u!114 &1021354629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2426,6 +2433,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021354626}
   m_CullTransparentMesh: 1
+--- !u!82 &1021354631
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021354626}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1026936697
 GameObject:
   m_ObjectHideFlags: 0
