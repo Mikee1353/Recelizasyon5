@@ -13,7 +13,7 @@ public class NewDialogueScript : MonoBehaviour
     public AudioClip one;
     public AudioClip two;
     public AudioClip three;
-    public float musicCounter;
+    public float musicCounter = 1;
 
     private int index;
     void Start()
@@ -31,11 +31,28 @@ public class NewDialogueScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            
-            
+            musicCounter++;
+
             if (textComponent.text == lines[index])
             {
                 NextLine();
+            }
+
+            if (musicCounter == 2)
+            {
+                audSrc.Stop();
+                audSrc.clip = two;
+                audSrc.Play();
+            }
+            else if (musicCounter == 3)
+            {
+                audSrc.Stop();
+                audSrc.clip = three;
+                audSrc.Play();
+            }
+            else if (musicCounter > 3)
+            {
+                audSrc.Stop();
             }
         }
         else
