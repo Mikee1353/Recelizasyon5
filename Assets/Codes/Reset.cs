@@ -64,7 +64,7 @@ public class Reset : MonoBehaviour
         currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
 
-        if (sceneName.Contains("Entry"))
+        if (sceneName.Contains("End"))
         {
             audi.Stop();
         }
