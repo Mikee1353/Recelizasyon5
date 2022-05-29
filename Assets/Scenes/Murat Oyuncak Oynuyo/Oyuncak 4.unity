@@ -3481,9 +3481,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 614434401}
   lines:
-  - ...it seems to disappear. I've never felt so close
-  - This life I'm in.. ...as if it's not mine.
-  - This place is so pointless. Our bodies are different, our lives are the same...
+  - Meaningless. Even our unhappiness... ... actually the same. Will everything be
+    the same again?
+  - Ordinary is no longer... ...it doesn't feel ordinary. Actually, my life has never
+    been... ... it did not become a whole.
+  - Like a normal day... ...but it's not normal at all. Here we go again. What I've
+    done in my life...
   textSpeed: 0.3
 --- !u!114 &1546529152
 MonoBehaviour:
