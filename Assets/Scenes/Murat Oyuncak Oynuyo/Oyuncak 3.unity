@@ -1672,15 +1672,13 @@ MonoBehaviour:
   lines:
   - That brought me to you... ... the same thing that took you to me. The same thing
     that took you to me.
-  - It's more meaningful now. I finally got it! Is it to be one whole... ...once
-    again?
-  - Can we be whole... ...or have we never been whole. Did yesterday actually happen
-    at all?
+  - It's more meaningful now.
+  - I think I've come very close to finding you... ...I guess
   textSpeed: 0.3
   audSrc: {fileID: 0}
   one: {fileID: 8300000, guid: 1edfae84927d1d847be8e5ecd3f56a66, type: 3}
-  two: {fileID: 8300000, guid: 198140704a24c5b45bd4f5dc042f04d4, type: 3}
-  three: {fileID: 8300000, guid: bc6ae9f2d0b8d594090b5d0f5f100e85, type: 3}
+  two: {fileID: 8300000, guid: e5cb6529a7a445c4687854b9ff9dcd84, type: 3}
+  three: {fileID: 8300000, guid: 01f707672e1d8e74998b24ddac927cf1, type: 3}
   musicCounter: 1
 --- !u!114 &381382100
 MonoBehaviour:
