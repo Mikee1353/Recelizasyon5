@@ -11,9 +11,14 @@ public class Reset : MonoBehaviour
     public Camera camR;
     public int repeatTime;
     bool KayriwasHere;
+    public AudioSource audi;
+    public Scene currentScene;
+    public string sceneName;
 
     private void Start()
     {
+        audi = GetComponent<AudioSource>();
+
         Reset[] ResetScripts = FindObjectsOfType<Reset>();
         int i = 0;
         foreach (Reset rs in ResetScripts)
@@ -56,6 +61,13 @@ public class Reset : MonoBehaviour
                     
         }
 
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+
+        if (sceneName.Contains("Entry"))
+        {
+            audi.Stop();
+        }
 
     }
 
