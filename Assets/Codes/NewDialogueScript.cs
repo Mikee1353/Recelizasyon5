@@ -8,12 +8,22 @@ public class NewDialogueScript : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    public AudioSource audSrc;
+    private string currentDia;
+    public AudioClip one;
+    public AudioClip two;
+    public AudioClip three;
+    public float musicCounter;
 
     private int index;
     void Start()
     {
         textComponent.text = string.Empty;
+        audSrc = GetComponent<AudioSource>();
         StartDialogue();
+
+        audSrc.clip = one;
+        audSrc.Play();
     }
 
     // Update is called once per frame
@@ -21,6 +31,8 @@ public class NewDialogueScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            
+            
             if (textComponent.text == lines[index])
             {
                 NextLine();
@@ -31,6 +43,7 @@ public class NewDialogueScript : MonoBehaviour
             StopAllCoroutines();
             textComponent.text = lines[index];
         }
+
     }
 
     void StartDialogue()
@@ -60,5 +73,12 @@ public class NewDialogueScript : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public void ChangeDia(AudioClip music)
+    {
+        audSrc.Stop();
+        audSrc.clip = music;
+        audSrc.Play();
     }
 }
